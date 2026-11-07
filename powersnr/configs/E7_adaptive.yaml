@@ -1,0 +1,150 @@
+# E7: attack strength: energy inflation, scaling, mimicry, collusion, jittered collusion, white-box and ALIE coalitions at 10-30%.
+experiment: E7
+datasets:
+- gmsc
+- taiwan
+seeds: 30
+partitions:
+- scheme: dirichlet
+  alpha: 0.5
+K:
+- 10
+max_rows: 60000
+eval_frac: 0.2
+root_frac: 0.1
+client_size: 3000
+models:
+- xgboost
+shap:
+  n_repeats: 20
+  n_explain: 1000
+  n_background: 100
+dataset_overrides:
+  lendingclub:
+    partition:
+      group: grade_num
+      threshold: 5
+  taiwan:
+    partition:
+      threshold: 50
+attacks:
+- name: adaptive_psnr
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+  params:
+  - boost: 10
+  - boost: 1000
+- name: adaptive_psnr
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+  params:
+  - cap: 3.0
+- name: scaling
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+  params:
+  - lam: 10
+  - lam: 100
+- name: mimic
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+  params:
+  - strength: 0.25
+  - strength: 0.5
+  - strength: 1.0
+- name: collusion
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+- name: collusion_jitter
+  fracs:
+  - 0.1
+  - 0.2
+  - 0.3
+  params:
+  - jitter: 1.0
+  - jitter: 3.0
+  - jitter: 10.0
+- name: whitebox
+  fracs: &id001
+  - 0.1
+  - 0.2
+  - 0.3
+- name: whitebox_strong
+  fracs: *id001
+- name: alie
+  fracs: *id001
+- name: minmax
+  fracs:
+  - 0.2
+aggregators:
+  fedavg: {}
+  median: {}
+  trimmed_mean:
+    beta: 0.2
+  trimmed_mean_0.3:
+    rule: trimmed_mean
+    beta: 0.3
+  geomedian: {}
+  krum: {}
+  multikrum: {}
+  bulyan: {}
+  centered_clipping: {}
+  foolsgold: {}
+  ivw:
+    eps: 1.0e-12
+  dersimonian_laird: {}
+  fltrust_like: {}
+  psnr_screen:
+    z: 2.0
+    cap: 2.0
+    floor: n
+    n_cap: 1000
+    shrink: 0.5
+    stage2: geomedian
+    n_repeats: 20
+    dedup: true
+    dup_ratio: 1.0
+  psnr_v3:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_unif:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: unif
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_fit:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: fit_ts
+    cap: 1.5
+    dedup: true
+    dup_ratio: 1.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+seed_offset: 5000

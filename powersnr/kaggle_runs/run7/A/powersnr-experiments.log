@@ -1,0 +1,353 @@
+[{"stream_name":"stderr","time":6.906699382,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":6.906747142,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":7.9658622470000005,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.96590945,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.96591805,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.965923055,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.742194411,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.742237513,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.742241862,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.742245318,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.343618514,"data":"code from /kaggle/input/datasets/mediker/powersnr-code\n"}
+,{"stream_name":"stdout","time":10.343653036,"data":"/kaggle/input/competitions/GiveMeSomeCredit/cs-test.csv 5.0 MB\n"}
+,{"stream_name":"stdout","time":10.343658396,"data":"/kaggle/input/competitions/GiveMeSomeCredit/cs-training.csv 7.6 MB\n"}
+,{"stream_name":"stdout","time":10.343663096,"data":"/kaggle/input/competitions/GiveMeSomeCredit/sampleEntry.csv 1.9 MB\n"}
+,{"stream_name":"stdout","time":10.343667385,"data":"/kaggle/input/competitions/home-credit-default-risk/HomeCredit_columns_description.csv 0.0 MB\n"}
+,{"stream_name":"stdout","time":10.343672015,"data":"/kaggle/input/competitions/home-credit-default-risk/POS_CASH_balance.csv 392.7 MB\n"}
+,{"stream_name":"stdout","time":10.343676505,"data":"/kaggle/input/competitions/home-credit-default-risk/application_test.csv 26.6 MB\n"}
+,{"stream_name":"stdout","time":10.343681349,"data":"/kaggle/input/competitions/home-credit-default-risk/application_train.csv 166.1 MB\n"}
+,{"stream_name":"stdout","time":10.343686059,"data":"/kaggle/input/competitions/home-credit-default-risk/bureau.csv 170.0 MB\n"}
+,{"stream_name":"stdout","time":10.343690586,"data":"/kaggle/input/competitions/home-credit-default-risk/bureau_balance.csv 375.6 MB\n"}
+,{"stream_name":"stdout","time":10.343695061,"data":"/kaggle/input/competitions/home-credit-default-risk/credit_card_balance.csv 424.6 MB\n"}
+,{"stream_name":"stdout","time":10.34369937,"data":"/kaggle/input/competitions/home-credit-default-risk/installments_payments.csv 723.1 MB\n"}
+,{"stream_name":"stdout","time":10.34370399,"data":"/kaggle/input/competitions/home-credit-default-risk/previous_application.csv 405.0 MB\n"}
+,{"stream_name":"stdout","time":10.343708676,"data":"/kaggle/input/competitions/home-credit-default-risk/sample_submission.csv 0.5 MB\n"}
+,{"stream_name":"stdout","time":10.343713166,"data":"/kaggle/input/datasets/mediker/powersnr-code/data/raw/taiwan/taiwan.csv 2.9 MB\n"}
+,{"stream_name":"stdout","time":10.343717757,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/accepted_2007_to_2018Q4.csv.gz 392.6 MB\n"}
+,{"stream_name":"stdout","time":10.343737129,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/accepted_2007_to_2018q4.csv 0.0 MB\n"}
+,{"stream_name":"stdout","time":10.343742222,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/accepted_2007_to_2018q4.csv/accepted_2007_to_2018Q4.csv 1675.1 MB\n"}
+,{"stream_name":"stdout","time":10.343746777,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/rejected_2007_to_2018Q4.csv.gz 255.5 MB\n"}
+,{"stream_name":"stdout","time":10.343751013,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/rejected_2007_to_2018q4.csv 0.0 MB\n"}
+,{"stream_name":"stdout","time":10.343755238,"data":"/kaggle/input/datasets/wordsforthewise/lending-club/rejected_2007_to_2018q4.csv/rejected_2007_to_2018Q4.csv 1782.3 MB\n"}
+,{"stream_name":"stdout","time":20.547540938,"data":"{'numpy': '2.1.3', 'pandas': '2.3.3', 'sklearn': '1.6.1', 'shap': '0.52.0', 'xgboost': '3.4.1', 'lightgbm': '4.6.0'}\n"}
+,{"stream_name":"stdout","time":25.788359611,"data":"........................................................................ [ 36%]\n"}
+,{"stream_name":"stdout","time":25.811396773,"data":".......................................................................... [ 36%]\n"}
+,{"stream_name":"stdout","time":41.228054832,"data":"................................................................................... [ 73%]\n"}
+,{"stream_name":"stdout","time":41.262348528,"data":"............................................................ [ 73%]\n"}
+,{"stream_name":"stdout","time":51.871539604,"data":".F..F............................................................                     [100%]......................................                     [100%]\n"}
+,{"stream_name":"stdout","time":51.871577217,"data":"=================================== FAILURES ===================================\n"}
+,{"stream_name":"stdout","time":51.871582731,"data":"________________________ test_missing_raw_file_message _________________________\n"}
+,{"stream_name":"stdout","time":51.871586898,"data":"\n"}
+,{"stream_name":"stdout","time":51.871590572,"data":"tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_missing_raw_file_message0')\n"}
+,{"stream_name":"stdout","time":51.871596083,"data":"\n"}
+,{"stream_name":"stdout","time":51.871601529,"data":"    def test_missing_raw_file_message(tmp_path):\n"}
+,{"stream_name":"stdout","time":51.871607158,"data":"\u003e       with pytest.raises(FileNotFoundError, match=\"Searched\"):\n"}
+,{"stream_name":"stdout","time":51.871613159,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":51.871618436,"data":"E       Failed: DID NOT RAISE \u003cclass 'FileNotFoundError'\u003e\n"}
+,{"stream_name":"stdout","time":51.871624084,"data":"\n"}
+,{"stream_name":"stdout","time":51.871629164,"data":"tests/test_data.py:65: Failed\n"}
+,{"stream_name":"stdout","time":51.871634871,"data":"=============================== warnings summary ===============================\n"}
+,{"stream_name":"stdout","time":51.871640504,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:64\n"}
+,{"stream_name":"stdout","time":51.871646403,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.871652316,"data":"    prop = Group((name + Suppress(\"=\") + comma_separated(value)) | oneOf(_CONSTANTS))\n"}
+,{"stream_name":"stdout","time":51.871658192,"data":"\n"}
+,{"stream_name":"stdout","time":51.871663534,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:85: 6 warnings\n"}
+,{"stream_name":"stdout","time":51.871682186,"data":"tests/test_analysis.py: 12 warnings\n"}
+,{"stream_name":"stdout","time":51.871685684,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":51.871689044,"data":"    parse = parser.parseString(pattern)\n"}
+,{"stream_name":"stdout","time":51.871692154,"data":"\n"}
+,{"stream_name":"stdout","time":51.871695124,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:89: 6 warnings\n"}
+,{"stream_name":"stdout","time":51.871699266,"data":"tests/test_analysis.py: 12 warnings\n"}
+,{"stream_name":"stdout","time":51.871703924,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":51.871708489,"data":"    parser.resetCache()\n"}
+,{"stream_name":"stdout","time":51.871712885,"data":"\n"}
+,{"stream_name":"stdout","time":51.871717243,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:45\n"}
+,{"stream_name":"stdout","time":51.871722069,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n"}
+,{"stream_name":"stdout","time":51.871726941,"data":"    ParserElement.enablePackrat()\n"}
+,{"stream_name":"stdout","time":51.871731416,"data":"\n"}
+,{"stream_name":"stdout","time":51.871735142,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.871739734,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2010: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.871793196,"data":"    p.space          = oneOf(self._space_widths)(\"space\")\n"}
+,{"stream_name":"stdout","time":51.871801889,"data":"\n"}
+,{"stream_name":"stdout","time":51.871806529,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.871811219,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2012: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.871815855,"data":"    p.style_literal  = oneOf(\n"}
+,{"stream_name":"stdout","time":51.871820466,"data":"\n"}
+,{"stream_name":"stdout","time":51.871824974,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.871829529,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2020: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'\n"}
+,{"stream_name":"stdout","time":51.871834956,"data":"    )(\"sym\").leaveWhitespace()\n"}
+,{"stream_name":"stdout","time":51.871839805,"data":"\n"}
+,{"stream_name":"stdout","time":51.871844619,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.87184937,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2024: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.871854486,"data":"    p.start_group    = Optional(r\"\\math\" + oneOf(self._fontnames)(\"font\")) + \"{\"\n"}
+,{"stream_name":"stdout","time":51.871860215,"data":"\n"}
+,{"stream_name":"stdout","time":51.871863161,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.871866196,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2027: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.871875758,"data":"    p.delim          = oneOf(self._delims)\n"}
+,{"stream_name":"stdout","time":51.871878838,"data":"\n"}
+,{"stream_name":"stdout","time":51.871912508,"data":"tests/test_analysis.py: 47 warnings\n"}
+,{"stream_name":"stdout","time":51.871922751,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1984: PyparsingDeprecationWarning: 'setName' deprecated - use 'set_name'\n"}
+,{"stream_name":"stdout","time":51.871927974,"data":"    val.setName(key)\n"}
+,{"stream_name":"stdout","time":51.871932556,"data":"\n"}
+,{"stream_name":"stdout","time":51.871936818,"data":"tests/test_analysis.py: 44 warnings\n"}
+,{"stream_name":"stdout","time":51.871940968,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1987: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'\n"}
+,{"stream_name":"stdout","time":51.871945566,"data":"    val.setParseAction(getattr(self, key))\n"}
+,{"stream_name":"stdout","time":51.871950013,"data":"\n"}
+,{"stream_name":"stdout","time":51.871953952,"data":"tests/test_analysis.py: 16 warnings\n"}
+,{"stream_name":"stdout","time":51.871958144,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1748: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'\n"}
+,{"stream_name":"stdout","time":51.871962815,"data":"    return Empty().setParseAction(raise_error)\n"}
+,{"stream_name":"stdout","time":51.871966819,"data":"\n"}
+,{"stream_name":"stdout","time":51.871970671,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.871975273,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2088: PyparsingDeprecationWarning: 'endQuoteChar' argument is deprecated, use 'end_quote_char'\n"}
+,{"stream_name":"stdout","time":51.871980466,"data":"    p.text = cmd(r\"\\text\", QuotedString('{', '\\\\', endQuoteChar=\"}\"))\n"}
+,{"stream_name":"stdout","time":51.871985679,"data":"\n"}
+,{"stream_name":"stdout","time":51.871990049,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.872082403,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2097: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":51.87210078,"data":"    + OneOrMore(oneOf([\"_\", \"^\"]) - p.placeable)(\"subsuper\")\n"}
+,{"stream_name":"stdout","time":51.872106476,"data":"\n"}
+,{"stream_name":"stdout","time":51.872111006,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.872115723,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2146: PyparsingDeprecationWarning: 'unquoteResults' argument is deprecated, use 'unquote_results'\n"}
+,{"stream_name":"stdout","time":51.872121269,"data":"    p.math_string   = QuotedString('$', '\\\\', unquoteResults=False)\n"}
+,{"stream_name":"stdout","time":51.872126735,"data":"\n"}
+,{"stream_name":"stdout","time":51.872131253,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":51.872136064,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2147: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'\n"}
+,{"stream_name":"stdout","time":51.872141075,"data":"    p.non_math      = Regex(r\"(?:(?:\\\\[$])|[^$])*\").leaveWhitespace()\n"}
+,{"stream_name":"stdout","time":51.872146346,"data":"\n"}
+,{"stream_name":"stdout","time":51.872150939,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":51.872155824000004,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2170: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":51.872172836,"data":"    result = self._expression.parseString(s)\n"}
+,{"stream_name":"stdout","time":51.872177948,"data":"\n"}
+,{"stream_name":"stdout","time":51.872182206,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":51.872186997,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2197: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":51.872192326,"data":"    return self._math_expression.parseString(toks[0][1:-1], parseAll=True)\n"}
+,{"stream_name":"stdout","time":51.872197278,"data":"\n"}
+,{"stream_name":"stdout","time":51.872201766,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":51.872206515,"data":"  /usr/local/lib/python3.13/dist-packages/pyparsing/util.py:466: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'\n"}
+,{"stream_name":"stdout","time":51.872212018,"data":"    return fn(self, *args, **kwargs)\n"}
+,{"stream_name":"stdout","time":51.872216666,"data":"\n"}
+,{"stream_name":"stdout","time":51.872221117,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":51.872225904,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2178: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":51.872231338,"data":"    ParserElement.resetCache()\n"}
+,{"stream_name":"stdout","time":51.872236046,"data":"\n"}
+,{"stream_name":"stdout","time":51.872240526,"data":"tests/test_explain.py::test_client_stats_shapes_and_determinism[logreg]\n"}
+,{"stream_name":"stdout","time":51.872245379,"data":"tests/test_explain.py::test_fit_client_no_test_split\n"}
+,{"stream_name":"stdout","time":51.872250336,"data":"  /usr/local/lib/python3.13/dist-packages/sklearn/linear_model/_logistic.py:451: DeprecationWarning: scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0.\n"}
+,{"stream_name":"stdout","time":51.872257548,"data":"    opt_res = optimize.minimize(\n"}
+,{"stream_name":"stdout","time":51.872262178,"data":"\n"}
+,{"stream_name":"stdout","time":51.872267878,"data":"-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n"}
+,{"stream_name":"stdout","time":51.872272838,"data":"=========================== short test summary info ============================\n"}
+,{"stream_name":"stdout","time":51.872277696,"data":"FAILED tests/test_data.py::test_missing_raw_file_message - Failed: DID NOT RA...\n"}
+,{"stream_name":"stdout","time":51.872282681,"data":"1 failed, 195 passed, 748 warnings in 28.77s\n"}
+,{"stream_name":"stdout","time":52.074655929,"data":"\n"}
+,{"stream_name":"stdout","time":52.074689415,"data":"=================================== FAILURES ===================================\n"}
+,{"stream_name":"stdout","time":52.074695355,"data":"________________________ test_missing_raw_file_message _________________________\n"}
+,{"stream_name":"stdout","time":52.07470022,"data":"\n"}
+,{"stream_name":"stdout","time":52.074704786,"data":"tmp_path = PosixPath('/tmp/pytest-of-root/pytest-0/test_missing_raw_file_message0')\n"}
+,{"stream_name":"stdout","time":52.074708843,"data":"\n"}
+,{"stream_name":"stdout","time":52.074711955,"data":"    def test_missing_raw_file_message(tmp_path):\n"}
+,{"stream_name":"stdout","time":52.074715149,"data":"\u003e       with pytest.raises(FileNotFoundError, match=\"Searched\"):\n"}
+,{"stream_name":"stdout","time":52.074731181,"data":"             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":52.074734652,"data":"E       Failed: DID NOT RAISE \u003cclass 'FileNotFoundError'\u003e\n"}
+,{"stream_name":"stdout","time":52.074738232,"data":"\n"}
+,{"stream_name":"stdout","time":52.074741181,"data":"tests/test_data.py:65: Failed\n"}
+,{"stream_name":"stdout","time":52.074744293,"data":"=============================== warnings summary ===============================\n"}
+,{"stream_name":"stdout","time":52.074747518,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:64\n"}
+,{"stream_name":"stdout","time":52.07475078,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074754063,"data":"    prop = Group((name + Suppress(\"=\") + comma_separated(value)) | oneOf(_CONSTANTS))\n"}
+,{"stream_name":"stdout","time":52.074757483,"data":"\n"}
+,{"stream_name":"stdout","time":52.074760483,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:85: 6 warnings\n"}
+,{"stream_name":"stdout","time":52.07476369,"data":"tests/test_analysis.py: 12 warnings\n"}
+,{"stream_name":"stdout","time":52.074766747,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":52.074770367,"data":"    parse = parser.parseString(pattern)\n"}
+,{"stream_name":"stdout","time":52.07477347,"data":"\n"}
+,{"stream_name":"stdout","time":52.074776404,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:89: 6 warnings\n"}
+,{"stream_name":"stdout","time":52.074780043,"data":"tests/test_analysis.py: 12 warnings\n"}
+,{"stream_name":"stdout","time":52.074783283,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":52.074786593,"data":"    parser.resetCache()\n"}
+,{"stream_name":"stdout","time":52.07478957,"data":"\n"}
+,{"stream_name":"stdout","time":52.074792443,"data":"../../../usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:45\n"}
+,{"stream_name":"stdout","time":52.074795661,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n"}
+,{"stream_name":"stdout","time":52.074798923,"data":"    ParserElement.enablePackrat()\n"}
+,{"stream_name":"stdout","time":52.074801972,"data":"\n"}
+,{"stream_name":"stdout","time":52.074804845,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.07480792,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2010: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074812369,"data":"    p.space          = oneOf(self._space_widths)(\"space\")\n"}
+,{"stream_name":"stdout","time":52.074815607,"data":"\n"}
+,{"stream_name":"stdout","time":52.074818565,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074821644,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2012: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074824935,"data":"    p.style_literal  = oneOf(\n"}
+,{"stream_name":"stdout","time":52.07482788,"data":"\n"}
+,{"stream_name":"stdout","time":52.074833405,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074836686,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2020: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'\n"}
+,{"stream_name":"stdout","time":52.074840037,"data":"    )(\"sym\").leaveWhitespace()\n"}
+,{"stream_name":"stdout","time":52.074843224,"data":"\n"}
+,{"stream_name":"stdout","time":52.074846071,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074849161,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2024: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074852483,"data":"    p.start_group    = Optional(r\"\\math\" + oneOf(self._fontnames)(\"font\")) + \"{\"\n"}
+,{"stream_name":"stdout","time":52.074856076,"data":"\n"}
+,{"stream_name":"stdout","time":52.074858925,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074861953,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2027: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074865203,"data":"    p.delim          = oneOf(self._delims)\n"}
+,{"stream_name":"stdout","time":52.074868217,"data":"\n"}
+,{"stream_name":"stdout","time":52.074871065,"data":"tests/test_analysis.py: 47 warnings\n"}
+,{"stream_name":"stdout","time":52.074874141,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1984: PyparsingDeprecationWarning: 'setName' deprecated - use 'set_name'\n"}
+,{"stream_name":"stdout","time":52.074877478,"data":"    val.setName(key)\n"}
+,{"stream_name":"stdout","time":52.074880418,"data":"\n"}
+,{"stream_name":"stdout","time":52.07490694,"data":"tests/test_analysis.py: 44 warnings\n"}
+,{"stream_name":"stdout","time":52.074911698,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1987: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'\n"}
+,{"stream_name":"stdout","time":52.074916807,"data":"    val.setParseAction(getattr(self, key))\n"}
+,{"stream_name":"stdout","time":52.074921167,"data":"\n"}
+,{"stream_name":"stdout","time":52.074925276,"data":"tests/test_analysis.py: 16 warnings\n"}
+,{"stream_name":"stdout","time":52.074929746,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:1748: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'\n"}
+,{"stream_name":"stdout","time":52.074934691,"data":"    return Empty().setParseAction(raise_error)\n"}
+,{"stream_name":"stdout","time":52.074939196,"data":"\n"}
+,{"stream_name":"stdout","time":52.074942163,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074945167,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2088: PyparsingDeprecationWarning: 'endQuoteChar' argument is deprecated, use 'end_quote_char'\n"}
+,{"stream_name":"stdout","time":52.0749485,"data":"    p.text = cmd(r\"\\text\", QuotedString('{', '\\\\', endQuoteChar=\"}\"))\n"}
+,{"stream_name":"stdout","time":52.074951987,"data":"\n"}
+,{"stream_name":"stdout","time":52.074954696,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074958146,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2097: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":52.074961274,"data":"    + OneOrMore(oneOf([\"_\", \"^\"]) - p.placeable)(\"subsuper\")\n"}
+,{"stream_name":"stdout","time":52.074967537,"data":"\n"}
+,{"stream_name":"stdout","time":52.074970375,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074973314,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2146: PyparsingDeprecationWarning: 'unquoteResults' argument is deprecated, use 'unquote_results'\n"}
+,{"stream_name":"stdout","time":52.074976573,"data":"    p.math_string   = QuotedString('$', '\\\\', unquoteResults=False)\n"}
+,{"stream_name":"stdout","time":52.074979788,"data":"\n"}
+,{"stream_name":"stdout","time":52.074982468,"data":"tests/test_analysis.py::test_figures_write_files\n"}
+,{"stream_name":"stdout","time":52.074985456,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2147: PyparsingDeprecationWarning: 'leaveWhitespace' deprecated - use 'leave_whitespace'\n"}
+,{"stream_name":"stdout","time":52.074988672,"data":"    p.non_math      = Regex(r\"(?:(?:\\\\[$])|[^$])*\").leaveWhitespace()\n"}
+,{"stream_name":"stdout","time":52.07499193,"data":"\n"}
+,{"stream_name":"stdout","time":52.074994618,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":52.074997529,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2170: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":52.075000643,"data":"    result = self._expression.parseString(s)\n"}
+,{"stream_name":"stdout","time":52.075003661,"data":"\n"}
+,{"stream_name":"stdout","time":52.075006337,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":52.075009301,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2197: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":52.075012501,"data":"    return self._math_expression.parseString(toks[0][1:-1], parseAll=True)\n"}
+,{"stream_name":"stdout","time":52.075015491,"data":"\n"}
+,{"stream_name":"stdout","time":52.075018263,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":52.075021176999996,"data":"  /usr/local/lib/python3.13/dist-packages/pyparsing/util.py:466: PyparsingDeprecationWarning: 'parseAll' argument is deprecated, use 'parse_all'\n"}
+,{"stream_name":"stdout","time":52.075024396,"data":"    return fn(self, *args, **kwargs)\n"}
+,{"stream_name":"stdout","time":52.075027276,"data":"\n"}
+,{"stream_name":"stdout","time":52.075029963,"data":"tests/test_analysis.py: 148 warnings\n"}
+,{"stream_name":"stdout","time":52.075032923,"data":"  /usr/local/lib/python3.13/dist-packages/matplotlib/_mathtext.py:2178: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":52.07503613,"data":"    ParserElement.resetCache()\n"}
+,{"stream_name":"stdout","time":52.075039023,"data":"\n"}
+,{"stream_name":"stdout","time":52.075041793,"data":"tests/test_explain.py::test_client_stats_shapes_and_determinism[logreg]\n"}
+,{"stream_name":"stdout","time":52.075044744,"data":"tests/test_explain.py::test_fit_client_no_test_split\n"}
+,{"stream_name":"stdout","time":52.075047738,"data":"  /usr/local/lib/python3.13/dist-packages/sklearn/linear_model/_logistic.py:451: DeprecationWarning: scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0.\n"}
+,{"stream_name":"stdout","time":52.075051465,"data":"    opt_res = optimize.minimize(\n"}
+,{"stream_name":"stdout","time":52.075054335,"data":"\n"}
+,{"stream_name":"stdout","time":52.075057098,"data":"-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n"}
+,{"stream_name":"stdout","time":52.075062627,"data":"=========================== short test summary info ============================\n"}
+,{"stream_name":"stdout","time":52.075065871,"data":"FAILED tests/test_data.py::test_missing_raw_file_message - Failed: DID NOT RA...\n"}
+,{"stream_name":"stdout","time":52.075068979,"data":"1 failed, 195 passed, 748 warnings in 28.77s\n"}
+,{"stream_name":"stdout","time":52.958956333,"data":"\u003e\u003e\u003e /usr/bin/python3 -m powersnr.runner --config configs/E1_fallacy.yaml --jobs 4\n"}
+,{"stream_name":"stdout","time":55.81662464,"data":"[E1] 120 cells -\u003e /kaggle/working/powersnr/results/20261031-215226_E1\n"}
+,{"stream_name":"stderr","time":55.829530517,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stdout","time":56.029025155,"data":"[E1] 120 cells -\u003e /kaggle/working/powersnr/results/20261031-215226_E1\n"}
+,{"stream_name":"stderr","time":56.03482346,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":56.034857312,"data":"\n"}
+,{"stream_name":"stderr","time":56.034862332,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":117.591214772,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.0min\n"}
+,{"stream_name":"stderr","time":117.80255639,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.0min\n"}
+,{"stream_name":"stderr","time":117.802583291,"data":"\n"}
+,{"stream_name":"stderr","time":117.802589362,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.0min\n"}
+,{"stream_name":"stderr","time":472.622713381,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  6.9min\n"}
+,{"stream_name":"stderr","time":472.833224245,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  6.9min\n"}
+,{"stream_name":"stderr","time":472.833261226,"data":"\n"}
+,{"stream_name":"stderr","time":472.833280354,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  6.9min\n"}
+,{"stream_name":"stderr","time":797.163245525,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 12.4min finished\n"}
+,{"stream_name":"stderr","time":797.369639851,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 12.4min finished\n"}
+,{"stream_name":"stderr","time":797.369672767,"data":"\n"}
+,{"stream_name":"stderr","time":797.36967966,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 12.4min finished\n"}
+,{"stream_name":"stdout","time":798.164081289,"data":"done: 10200 rows in 741.6s -\u003e /kaggle/working/powersnr/results/20261031-215226_E1\n"}
+,{"stream_name":"stdout","time":798.367124491,"data":"done: 10200 rows in 741.6s -\u003e /kaggle/working/powersnr/results/20261031-215226_E1\n"}
+,{"stream_name":"stdout","time":798.719486267,"data":"\u003e\u003e\u003e /usr/bin/python3 -m powersnr.runner --config configs/E2_noise.yaml --jobs 4\n"}
+,{"stream_name":"stdout","time":801.569002129,"data":"[E2] 30 cells -\u003e /kaggle/working/powersnr/results/20261031-220452_E2\n"}
+,{"stream_name":"stderr","time":801.572666079,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stdout","time":801.775651329,"data":"[E2] 30 cells -\u003e /kaggle/working/powersnr/results/20261031-220452_E2\n"}
+,{"stream_name":"stderr","time":801.780613752,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":801.780896747,"data":"\n"}
+,{"stream_name":"stderr","time":801.781017567,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":900.315484414,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.6min\n"}
+,{"stream_name":"stderr","time":900.532205576,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.6min\n"}
+,{"stream_name":"stderr","time":900.532236588,"data":"\n"}
+,{"stream_name":"stderr","time":900.532242906,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.6min\n"}
+,{"stream_name":"stderr","time":1043.364064563,"data":"[Parallel(n_jobs=4)]: Done  30 out of  30 | elapsed:  4.0min finished\n"}
+,{"stream_name":"stderr","time":1043.59104782,"data":"[Parallel(n_jobs=4)]: Done  30 out of  30 | elapsed:  4.0min finished\n"}
+,{"stream_name":"stderr","time":1043.59108207,"data":"\n"}
+,{"stream_name":"stderr","time":1043.591088227,"data":"[Parallel(n_jobs=4)]: Done  30 out of  30 | elapsed:  4.0min finished\n"}
+,{"stream_name":"stdout","time":1044.218379907,"data":"done: 3570 rows in 241.9s -\u003e /kaggle/working/powersnr/results/20261031-220452_E2\n"}
+,{"stream_name":"stdout","time":1044.421298905,"data":"done: 3570 rows in 241.9s -\u003e /kaggle/working/powersnr/results/20261031-220452_E2\n"}
+,{"stream_name":"stdout","time":1044.78635115,"data":"\u003e\u003e\u003e /usr/bin/python3 -m powersnr.runner --config configs/E7_adaptive.yaml --jobs 4\n"}
+,{"stream_name":"stdout","time":1047.795449675,"data":"[E7] 60 cells -\u003e /kaggle/working/powersnr/results/20261031-220858_E7\n"}
+,{"stream_name":"stderr","time":1047.799377027,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stdout","time":1048.004868582,"data":"[E7] 60 cells -\u003e /kaggle/working/powersnr/results/20261031-220858_E7\n"}
+,{"stream_name":"stderr","time":1048.011716179,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":1048.011752884,"data":"\n"}
+,{"stream_name":"stderr","time":1048.011911277,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":1194.489226129,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  2.4min\n"}
+,{"stream_name":"stderr","time":1194.704260047,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  2.4min\n"}
+,{"stream_name":"stderr","time":1194.70429612,"data":"\n"}
+,{"stream_name":"stderr","time":1194.704303136,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  2.4min\n"}
+,{"stream_name":"stderr","time":1799.537200626,"data":"[Parallel(n_jobs=4)]: Done  60 out of  60 | elapsed: 12.5min finished\n"}
+,{"stream_name":"stderr","time":1799.743258799,"data":"[Parallel(n_jobs=4)]: Done  60 out of  60 | elapsed: 12.5min finished\n"}
+,{"stream_name":"stderr","time":1799.74329114,"data":"\n"}
+,{"stream_name":"stderr","time":1799.743297635,"data":"[Parallel(n_jobs=4)]: Done  60 out of  60 | elapsed: 12.5min finished\n"}
+,{"stream_name":"stdout","time":1801.288693163,"data":"done: 47940 rows in 752.7s -\u003e /kaggle/working/powersnr/results/20261031-220858_E7\n"}
+,{"stream_name":"stdout","time":1801.491698927,"data":"done: 47940 rows in 752.7s -\u003e /kaggle/working/powersnr/results/20261031-220858_E7\n"}
+,{"stream_name":"stdout","time":1801.868137084,"data":"\u003e\u003e\u003e /usr/bin/python3 -m powersnr.runner --config configs/E9_quality.yaml --jobs 4\n"}
+,{"stream_name":"stdout","time":1804.973587184,"data":"[E9] 120 cells -\u003e /kaggle/working/powersnr/results/20261031-222135_E9\n"}
+,{"stream_name":"stderr","time":1804.977820419,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stdout","time":1805.179719898,"data":"[E9] 120 cells -\u003e /kaggle/working/powersnr/results/20261031-222135_E9\n"}
+,{"stream_name":"stderr","time":1805.18471287,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":1805.184778228,"data":"\n"}
+,{"stream_name":"stderr","time":1805.188271414,"data":"[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.\n"}
+,{"stream_name":"stderr","time":1914.37719907,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.8min\n"}
+,{"stream_name":"stderr","time":1914.590588012,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.8min\n"}
+,{"stream_name":"stderr","time":1914.590617994,"data":"\n"}
+,{"stream_name":"stderr","time":1914.590624314,"data":"[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:  1.8min\n"}
+,{"stream_name":"stderr","time":2550.313479521,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed: 12.4min\n"}
+,{"stream_name":"stderr","time":2550.529744177,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed: 12.4min\n"}
+,{"stream_name":"stderr","time":2550.529774928,"data":"\n"}
+,{"stream_name":"stderr","time":2550.529781282,"data":"[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed: 12.4min\n"}
+,{"stream_name":"stderr","time":3460.361652954,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 27.6min finished\n"}
+,{"stream_name":"stderr","time":3460.569753202,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 27.6min finished\n"}
+,{"stream_name":"stderr","time":3460.569817717,"data":"\n"}
+,{"stream_name":"stderr","time":3460.569823168,"data":"[Parallel(n_jobs=4)]: Done 120 out of 120 | elapsed: 27.6min finished\n"}
+,{"stream_name":"stdout","time":3461.857746173,"data":"done: 28560 rows in 1656.1s -\u003e /kaggle/working/powersnr/results/20261031-222135_E9\n"}
+,{"stream_name":"stdout","time":3462.060543569,"data":"done: 28560 rows in 1656.1s -\u003e /kaggle/working/powersnr/results/20261031-222135_E9\n"}
+,{"stream_name":"stdout","time":3462.469485728,"data":"['results/20261031-215226_E1', 'results/20261031-220452_E2', 'results/20261031-220858_E7', 'results/20261031-222135_E9']\n"}
+,{"stream_name":"stdout","time":3479.165951026,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-215226_E1\n"}
+,{"stream_name":"stdout","time":3479.368793235,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-215226_E1\n"}
+,{"stream_name":"stdout","time":3489.643368501,"data":"wrote 10 files for 1 experiment(s) into paper_assets/20261031-220452_E2\n"}
+,{"stream_name":"stdout","time":3489.846053522,"data":"wrote 10 files for 1 experiment(s) into paper_assets/20261031-220452_E2\n"}
+,{"stream_name":"stderr","time":3540.489572619,"data":"/kaggle/working/powersnr/analysis/tables.py:127: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3540.489621311,"data":"  ref = np.nanmin(R, axis=axis, keepdims=True) if lower_is_better else \\\n"}
+,{"stream_name":"stderr","time":3540.695699565,"data":"/kaggle/working/powersnr/analysis/tables.py:127: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3540.695734011,"data":"  ref = np.nanmin(R, axis=axis, keepdims=True) if lower_is_better else \\\n"}
+,{"stream_name":"stderr","time":3540.695741001,"data":"\n"}
+,{"stream_name":"stderr","time":3540.695746798,"data":"/kaggle/working/powersnr/analysis/tables.py:127: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3540.695752818,"data":"  ref = np.nanmin(R, axis=axis, keepdims=True) if lower_is_better else \\\n"}
+,{"stream_name":"stderr","time":3545.62232301,"data":"/kaggle/working/powersnr/analysis/tables.py:213: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3545.62238251,"data":"  ref = np.nanmin(R, axis=0, keepdims=True) if lib else np.nanmax(R, axis=0, keepdims=True)\n"}
+,{"stream_name":"stdout","time":3545.633726582,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-220858_E7\n"}
+,{"stream_name":"stderr","time":3545.825455423,"data":"/kaggle/working/powersnr/analysis/tables.py:213: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3545.825495562,"data":"  ref = np.nanmin(R, axis=0, keepdims=True) if lib else np.nanmax(R, axis=0, keepdims=True)\n"}
+,{"stream_name":"stderr","time":3545.825501492,"data":"\n"}
+,{"stream_name":"stderr","time":3545.825506092,"data":"/kaggle/working/powersnr/analysis/tables.py:213: RuntimeWarning: All-NaN slice encountered\n"}
+,{"stream_name":"stderr","time":3545.825510834,"data":"  ref = np.nanmin(R, axis=0, keepdims=True) if lib else np.nanmax(R, axis=0, keepdims=True)\n"}
+,{"stream_name":"stdout","time":3545.837099684,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-220858_E7\n"}
+,{"stream_name":"stdout","time":3591.877608784,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-222135_E9\n"}
+,{"stream_name":"stdout","time":3592.089926059,"data":"wrote 6 files for 1 experiment(s) into paper_assets/20261031-222135_E9\n"}
+,{"stream_name":"stdout","time":3593.216636716,"data":"saved /kaggle/working/output.zip\n"}
+,{"stream_name":"stderr","time":3597.382065433,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3597.382109028,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3597.582793039,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3597.582823327,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3598.562927182,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":3598.675193351,"data":"[NbConvertApp] Writing 22176 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":3602.065290268,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3602.770696833,"data":"[NbConvertApp] Writing 306503 bytes to __results__.html\n"}
+]

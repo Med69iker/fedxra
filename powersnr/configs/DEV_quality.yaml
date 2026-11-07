@@ -1,0 +1,20 @@
+# Local development only: honest client reports for offline aggregator design (not a paper experiment).
+experiment: DEVQ
+datasets: [gmsc, taiwan, homecredit]
+seeds: 8
+partitions:
+  - {scheme: quantity, sigma: 1.0}
+K: [10, 20]
+max_rows: 60000
+eval_frac: 0.2
+root_frac: 0.1
+client_size: 3000
+models: [xgboost]
+shap: {n_repeats: 5, n_explain: 1000, n_background: 100}
+dataset_overrides:
+  taiwan: {partition: {threshold: 50}}
+attacks:
+  - {name: input_noise, fracs: [0.3], params: [{lam: 0.5}, {lam: 1.0}, {lam: 40}]}
+  - {name: label_flip, fracs: [0.3], params: [{p: 0.2}, {p: 0.4}]}
+aggregators:
+  fedavg: {}

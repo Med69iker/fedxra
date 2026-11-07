@@ -1,0 +1,131 @@
+experiment: E9
+datasets:
+- gmsc
+- taiwan
+- homecredit
+seeds: 20
+partitions:
+- scheme: quantity
+  sigma: 1.0
+K:
+- 10
+- 20
+max_rows: 60000
+eval_frac: 0.2
+root_frac: 0.1
+client_size: 3000
+models:
+- xgboost
+shap:
+  n_repeats: 20
+  n_explain: 1000
+  n_background: 100
+dataset_overrides:
+  lendingclub:
+    partition:
+      group: grade_num
+      threshold: 5
+  taiwan:
+    partition:
+      threshold: 50
+attacks:
+- name: input_noise
+  fracs:
+  - 0.3
+  params:
+  - lam: 0.5
+  - lam: 1.0
+  - lam: 40
+- name: label_flip
+  fracs:
+  - 0.3
+  params:
+  - p: 0.2
+  - p: 0.4
+- name: frozen
+  fracs:
+  - 0.2
+- name: feature_hiding
+  fracs:
+  - 0.2
+- name: adaptive_psnr
+  fracs:
+  - 0.2
+  params:
+  - boost: 10
+- name: whitebox
+  fracs: &id001
+  - 0.2
+- name: whitebox_strong
+  fracs: *id001
+  params:
+  - {}
+  - claim_n: 1000
+- name: alie
+  fracs: *id001
+- name: minmax
+  fracs:
+  - 0.2
+aggregators:
+  fedavg: {}
+  median: {}
+  trimmed_mean:
+    beta: 0.2
+  trimmed_mean_0.3:
+    rule: trimmed_mean
+    beta: 0.3
+  geomedian: {}
+  krum: {}
+  multikrum: {}
+  bulyan: {}
+  centered_clipping: {}
+  foolsgold: {}
+  ivw:
+    eps: 1.0e-12
+  dersimonian_laird: {}
+  fltrust_like: {}
+  psnr_screen:
+    z: 2.0
+    cap: 2.0
+    floor: n
+    n_cap: 1000
+    shrink: 0.5
+    stage2: geomedian
+    n_repeats: 20
+    dedup: true
+    dup_ratio: 1.0
+  psnr_v3:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_unif:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: unif
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_fit:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: fit_ts
+    cap: 1.5
+    dedup: true
+    dup_ratio: 1.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+seed_offset: 5000
+save_phi_seeds: 1

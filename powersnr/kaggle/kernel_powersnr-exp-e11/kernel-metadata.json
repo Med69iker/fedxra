@@ -1,0 +1,19 @@
+{
+  "id": "mediker/powersnr-exp-e11",
+  "title": "powersnr-exp-e11",
+  "code_file": "powersnr-experiments.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "mediker/powersnr-code",
+    "wordsforthewise/lending-club"
+  ],
+  "competition_sources": [
+    "GiveMeSomeCredit",
+    "home-credit-default-risk"
+  ],
+  "kernel_sources": []
+}

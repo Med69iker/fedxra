@@ -1,0 +1,31 @@
+experiment: SMOKE
+datasets: [gmsc]
+seeds: 2
+partitions:
+  - {scheme: feature, group: age, threshold: 60, n_minority: 1}
+K: [3]
+max_rows: 20000
+eval_frac: 0.2
+root_frac: 0.1
+client_size: 1500
+models: [xgboost]
+shap: {n_repeats: 3, n_explain: 300, n_background: 50}
+attacks:
+  - {name: input_noise, fracs: [0.33], params: [{lam: 40}]}
+  - {name: zero, fracs: [0.33]}
+  - {name: frozen, fracs: [0.33]}
+  - {name: adaptive_psnr, fracs: [0.33]}
+aggregators:
+  mean: {}
+  fedavg: {}
+  median: {}
+  trimmed_mean: {beta: 0.2}
+  geomedian: {}
+  krum: {}
+  multikrum: {}
+  ivw: {eps: 1.0e-12}
+  dersimonian_laird: {}
+  fltrust_like: {}
+  psnr_legacy: {}
+  psnr_base: {eps: 1.0e-12}
+  psnr_robust: {eps: 1.0e-12, cap: 3.0, consensus: median}

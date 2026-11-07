@@ -1,0 +1,248 @@
+experiment: E8
+datasets:
+- gmsc
+- taiwan
+seeds: 30
+partitions:
+- scheme: feature
+  group: age
+  threshold: 60
+  n_minority: 1
+- scheme: dirichlet
+  alpha: 0.5
+- scheme: quantity
+  sigma: 1.0
+K:
+- 3
+- 10
+max_rows: 60000
+eval_frac: 0.2
+root_frac: 0.1
+client_size: 3000
+models:
+- xgboost
+shap:
+  n_repeats: 20
+  n_explain: 1000
+  n_background: 100
+dataset_overrides:
+  lendingclub:
+    partition:
+      group: grade_num
+      threshold: 5
+  taiwan:
+    partition:
+      threshold: 50
+attacks:
+- name: input_noise
+  fracs:
+  - 0.2
+  params:
+  - lam: 40
+- name: zero
+  fracs:
+  - 0.2
+- name: frozen
+  fracs:
+  - 0.2
+- name: adaptive_psnr
+  fracs:
+  - 0.2
+- name: collusion
+  fracs:
+  - 0.2
+- name: collusion_jitter
+  fracs:
+  - 0.2
+  params:
+  - jitter: 3.0
+- name: whitebox
+  fracs: &id001
+  - 0.2
+- name: whitebox_strong
+  fracs: *id001
+- name: alie
+  fracs: *id001
+- name: minmax
+  fracs:
+  - 0.2
+aggregators:
+  fedavg: {}
+  trimmed_mean:
+    beta: 0.2
+  trimmed_mean_0.3:
+    rule: trimmed_mean
+    beta: 0.3
+  geomedian: {}
+  psnr_screen:
+    z: 2.0
+    cap: 2.0
+    floor: n
+    n_cap: 1000
+    shrink: 0.5
+    stage2: geomedian
+    n_repeats: 20
+    dedup: true
+    dup_ratio: 1.0
+  psnr_v3:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_unif:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: unif
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_fit:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: fit_ts
+    cap: 1.5
+    dedup: true
+    dup_ratio: 1.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_fit_dd4:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: fit_ts
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_fit_nweights_dd1:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 1.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_run5:
+    rule: psnr_v3
+    z: 2.0
+    mass_z: 3.0
+    weight: n
+    cap: 3.0
+    dedup: true
+    dup_ratio: 4.0
+    combine: huber
+    huber_c: 0.5
+    scale_q: 0.8
+    profile_screen: true
+    n_cap: 1000
+  psnr_v3_huber_stage:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: huber
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+    huber_c: 0.5
+    scale_q: 0.8
+  psnr_v3_median_stage:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: median
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_mean_stage:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: mean
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_profile_screen:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: true
+    n_cap: 1000
+    z: 2.0
+  psnr_v3_no_screens:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+    screens: false
+  psnr_v3_no_dedup:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: false
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_cap3:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 3.0
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.3
+    profile_screen: false
+    n_cap: 1000
+  psnr_v3_trim0.2:
+    rule: psnr_v3
+    mass_z: 3.0
+    weight: n
+    cap: 1.5
+    dedup: true
+    dup_ratio: 4.0
+    combine: trim
+    trim_beta: 0.2
+    profile_screen: false
+    n_cap: 1000
+seed_offset: 5000
+save_phi_seeds: 1

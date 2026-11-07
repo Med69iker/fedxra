@@ -1,0 +1,3 @@
+# Hashed result files must keep their exact bytes (no line-ending conversion)
+powersnr/kaggle_runs/** -text
+manuscript_eswa/evidence/** -text
